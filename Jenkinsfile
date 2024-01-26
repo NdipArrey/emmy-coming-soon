@@ -18,12 +18,13 @@ pipeline {
         
             }
         }
-        
     }
-    stages {
-        stage('Build')
 
-    }
-}       
+}     
+    
+      
+
+
+
 
  
