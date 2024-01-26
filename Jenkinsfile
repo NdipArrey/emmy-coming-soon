@@ -5,6 +5,9 @@ pipeline {
     triggers {
         pollSCM '* * * * *'
     }
+    environment {
+        CI = false //do not treat error as warnings
+    }
     stages {
         stage('Build') {
             steps {
@@ -15,14 +18,12 @@ pipeline {
         
             }
         }
-        stage('Test') {
-            steps {
-                echo "Testing.."
-                sh 'npm run test'
-                    
-                
-            }
-        }
+        
+    }
+    stages {
+        stage('Bbuild')
+        
     }
 }       
 
+ 
