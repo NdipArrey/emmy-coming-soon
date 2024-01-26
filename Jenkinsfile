@@ -21,8 +21,8 @@ pipeline {
         
     }
     stages {
-        stage('Bbuild')
-        
+        stage('Build')
+
     }
 }       
 
