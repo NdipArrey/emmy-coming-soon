@@ -1,6 +1,6 @@
-FROM: ngnix alpine as der
+FROM ngnix-alphine
 
-COPY: /build ngnix-url-location
+COPY /build /usr/share/ngnix/html
 
-EXPOSE: 90
+EXPOSE 90
 
