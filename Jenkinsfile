@@ -6,7 +6,7 @@ pipeline {
         pollSCM '* * * * *'
     }
     environment {
-        CI = false //do not treat error as warnings
+        CI = false     //do not treat error as warnings
     }
     stages {
         stage('Build') {
