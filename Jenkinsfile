@@ -8,6 +8,7 @@ pipeline {
     environment {
         CI = false     //do not treat error as warnings
     }
+
     stages {
         stage('Build') {
             steps {
@@ -17,7 +18,7 @@ pipeline {
 
         
             }
-
+        stage('Container'){
             steps {
                 echo "Building"
                 sh 'Docker login -u NdipArrey -p Nmanny06NE'
