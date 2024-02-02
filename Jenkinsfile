@@ -23,10 +23,10 @@ pipeline {
 
         stage('Delivery'){
             steps {
-                sh 'Docker login -u NdipArrey -p Nmanny06NE'
-                sh 'Docker build -t EmmyrideJ:0.1.${BUILD_NUMBER} .'
-                sh 'Docker tag EmmyrideJ:0.1 NdipArrey/Emmyride:0.1'
-                sh 'Docker push NdipArrey/EmmyrideJ 0.1'
+                sh 'docker login -u NdipArrey -p Nmanny06NE'
+                sh 'docker build -t EmmyrideJ:0.1.${BUILD_NUMBER} .'
+                sh 'docker tag EmmyrideJ:0.1 NdipArrey/Emmyride:0.1'
+                sh 'docker push NdipArrey/EmmyrideJ 0.1'
             }
         }
     }
