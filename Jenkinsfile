@@ -24,9 +24,9 @@ pipeline {
         stage('Delivery'){
             steps {
                 sh 'docker login -u NdipArrey -p Nmanny06NE'
-                sh 'docker build -t emmy-ride:v1 ${1} .'
-                sh 'docker tag emmy-ride:v1 NdipArrey:v1'
-                sh 'docker push emmy-ride:v1'
+                sh 'docker build -t emmy-ride:v1 .'
+                sh 'docker tag emmy-ride:v1 NdipArrey/emmy-ride:v1'
+                sh 'docker push NdipArrey/emmy-ride:v1'
             }
         }
     }
